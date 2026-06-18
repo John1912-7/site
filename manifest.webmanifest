@@ -1,0 +1,8 @@
+{
+  "name": "Dog Training Academy",
+  "short_name": "DTA",
+  "start_url": "/site/",
+  "display": "standalone",
+  "background_color": "#fbfcf8",
+  "theme_color": "#1f6f5b"
+}

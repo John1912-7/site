@@ -1,3 +1,27 @@
 # Dog Training Academy
 
-A public blog site for practical dog training guidance.
+Public SEO-ready blog starter for a future dog training content site.
+
+## What is included
+
+- Static GitHub Pages website
+- SEO metadata, Open Graph tags, JSON-LD structured data
+- Reserved ad placements for future monetization
+- Empty article grid ready for future posts
+- `robots.txt`, `sitemap.xml`, RSS feed, and `.nojekyll`
+- GitHub Actions workflow for publishing Pages from `main`
+
+## Publishing notes
+
+The repository is public. GitHub Pages is configured through `.github/workflows/pages.yml` and publishes the repository root as the site artifact.
+
+Expected Pages URL:
+
+https://john1912-7.github.io/site/
+
+After adding posts, update:
+
+- `sitemap.xml`
+- `feed.xml`
+- Any post data used by `script.js`
+- Internal links on `index.html`

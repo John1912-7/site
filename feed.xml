@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dog Training Academy</title>
+    <link>https://john1912-7.github.io/site/</link>
+    <description>Practical dog training articles for obedience, puppy manners, behavior, leash skills, and recall.</description>
+    <language>en</language>
+    <atom:link href="https://john1912-7.github.io/site/feed.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
