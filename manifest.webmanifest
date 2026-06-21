@@ -1,6 +1,7 @@
 {
   "name": "Dog Training Academy",
   "short_name": "DTA",
+  "lang": "hy-AM",
   "start_url": "/site/",
   "display": "standalone",
   "background_color": "#fbfcf8",
