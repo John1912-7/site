@@ -128,12 +128,12 @@
         <h2 id="topics-title">Բլոգի հիմնական թեմաները</h2>
       </div>
       <div class="topic-grid">
-        <a class="topic-card" href="#articles" data-topic="ձագերի վարժեցում"><span>Ձագերի վարժեցում</span><small>Տան կանոններ, վանդակին սովորեցում, կծելու սովորություն, սոցիալականացում։</small></a>
-        <a class="topic-card" href="#articles" data-topic="հնազանդություն"><span>Հիմնական հնազանդություն</span><small>Նստել, մնալ, պառկել, տեղ, ազատման հրամաններ և հետևողականություն։</small></a>
-        <a class="topic-card" href="#articles" data-topic="զբոսանք"><span>Զբոսանք կապով</span><small>Հանգիստ քայլք, ուշադրություն, շեղումներ և անվտանգ զբոսանքներ։</small></a>
-        <a class="topic-card" href="#articles" data-topic="կանչ"><span>Կանչ և վերադարձ</span><small>Ինչպես սովորեցնել շանը գալ կանչի ժամանակ՝ հեռավորությամբ և շեղումներով։</small></a>
-        <a class="topic-card" href="#articles" data-topic="վարքագիծ"><span>Վարքագծի խնդիրներ</span><small>Հաչոց, ցատկել, կրծել, վախ, գրգռվածություն և հանգիստ առօրյա։</small></a>
-        <a class="topic-card" href="#articles" data-topic="պարագաներ"><span>Վարժեցման պարագաներ</span><small>Պարգևներ, քլիքեր, երկար կապ, ամրագոտի և մտավոր զբաղվածություն։</small></a>
+        <a class="topic-card" href="posts/shan-dzagy-kcum-e-dzerqery/" data-topic="ձագերի վարժեցում"><span>Ձագերի վարժեցում</span><small>Ինչ անել, երբ ձագը կծում է ձեռքերը, ինչպես ուղղորդել խաղը և պահել հանգիստ ռեժիմ։</small></a>
+        <a class="topic-card" href="posts/shuny-chcatkel-mardkanc-vra/" data-topic="հնազանդություն"><span>Հիմնական հնազանդություն</span><small>Հանգիստ ողջույն, չցատկել մարդկանց վրա և լսել տիրոջ պարզ ազդանշանները։</small></a>
+        <a class="topic-card" href="posts/shuny-qashum-e-kapy/" data-topic="զբոսանք"><span>Զբոսանք կապով</span><small>Ինչ անել, երբ շունը քաշում է կապը, շտապում առաջ և չի հետևում ձեր քայլքին։</small></a>
+        <a class="topic-card" href="posts/sovorecnel-shany-ari-hramany/" data-topic="կանչ"><span>Կանչ և վերադարձ</span><small>Ինչպես սովորեցնել շանը գալ «արի» հրամանով և վստահ վերադառնալ շեղումների ժամանակ։</small></a>
+        <a class="topic-card" href="posts/inchu-e-shuny-hachum/" data-topic="վարքագիծ"><span>Վարքագծի խնդիրներ</span><small>Ինչու է շունը հաչում, ինչ է նա փորձում ասել և ինչպես հանգիստ նվազեցնել հաչոցը։</small></a>
+        <a class="topic-card" href="#articles" data-topic="պարագաներ"><span>Վարժեցման պարագաներ</span><small>Պարգևներ, երկար կապ, խաղալիքներ և անվտանգ առօրյա վարժանքի սովորություններ։</small></a>
       </div>
     </section>
 
@@ -146,7 +146,7 @@
           </div>
           <label class="search-box">
             <span class="sr-only">Որոնել հոդվածներ</span>
-            <input type="search" placeholder="Որոնել ապագա հոդվածներում" data-search>
+            <input type="search" placeholder="Որոնել հոդվածներում" data-search>
           </label>
         </div>
         <div class="filter-row" aria-label="Հոդվածների ֆիլտրեր">
@@ -154,23 +154,50 @@
           <button type="button" class="filter-chip" data-filter="ձագերի վարժեցում">Ձագեր</button>
           <button type="button" class="filter-chip" data-filter="հնազանդություն">Հնազանդություն</button>
           <button type="button" class="filter-chip" data-filter="զբոսանք">Զբոսանք</button>
+          <button type="button" class="filter-chip" data-filter="կանչ">Կանչ</button>
           <button type="button" class="filter-chip" data-filter="վարքագիծ">Վարքագիծ</button>
         </div>
-        <div class="article-grid" data-post-grid></div>
-        <div class="empty-state" data-empty-state>
-          <p class="eyebrow">Դեռ հոդվածներ չկան</p>
-          <h3>Հոդվածները կհայտնվեն այստեղ, երբ սկսեք հրապարակել դրանք։</h3>
-          <p>Էջը պատրաստ է ապագա հայերեն բովանդակության համար՝ առանց կեղծ կամ դատարկ հոդվածներ հրապարակելու։ Սա պահում է բլոգը մաքուր և որոնողական համակարգերին տալիս է հստակ կառուցվածք։</p>
+        <div class="article-grid" data-post-grid>
+          <article class="post-card">
+            <p class="eyebrow">զբոսանք</p>
+            <h3><a href="posts/shuny-qashum-e-kapy/">Ինչ անել, եթե շունը քաշում է կապը զբոսանքի ժամանակ</a></h3>
+            <p>Ինչու է շունը շտապում առաջ և ինչպես սովորեցնել հանգիստ քայլել թուլացած կապով։</p>
+          </article>
+          <article class="post-card">
+            <p class="eyebrow">ձագերի վարժեցում</p>
+            <h3><a href="posts/shan-dzagy-kcum-e-dzerqery/">Ինչ անել, եթե շան ձագը կծում է ձեռքերը</a></h3>
+            <p>Ինչու են ձագերը կծում ձեռքերը և ինչպես փոխարինել այդ վարքը անվտանգ խաղալիքով։</p>
+          </article>
+          <article class="post-card">
+            <p class="eyebrow">վարքագիծ</p>
+            <h3><a href="posts/shuny-chcatkel-mardkanc-vra/">Ինչպես սովորեցնել շանը չցատկել մարդկանց վրա</a></h3>
+            <p>Ինչպես սովորեցնել շանը հանգիստ ողջունել հյուրերին և անցորդներին։</p>
+          </article>
+          <article class="post-card">
+            <p class="eyebrow">կանչ</p>
+            <h3><a href="posts/sovorecnel-shany-ari-hramany/">Ինչպես սովորեցնել շանը «արի» հրամանը</a></h3>
+            <p>Վստահ կանչի քայլեր՝ տանը, բակում և շեղումների պայմաններում։</p>
+          </article>
+          <article class="post-card">
+            <p class="eyebrow">վարքագիծ</p>
+            <h3><a href="posts/inchu-e-shuny-hachum/">Ինչու է շունը հաչում և ինչ անել</a></h3>
+            <p>Ինչպես հասկանալ հաչոցի պատճառը և նվազեցնել այն հանգիստ մեթոդներով։</p>
+          </article>
+        </div>
+        <div class="empty-state" data-empty-state hidden>
+          <p class="eyebrow">Արդյունք չկա</p>
+          <h3>Այս որոնմամբ հոդված չի գտնվել։</h3>
+          <p>Փորձեք այլ բառ կամ ընտրեք մեկ այլ թեմա վերևի ֆիլտրերից։</p>
         </div>
       </div>
       <aside class="sidebar" aria-label="Կողային հատված">
         <div class="sidebar-panel">
-          <h2>Ապագա հայտնի թեմաներ</h2>
+          <h2>Հայտնի թեմաներ</h2>
           <ul class="link-list">
-            <li><a href="#topics">Ինչպես սկսել ձագի վարժեցումը</a></li>
-            <li><a href="#topics">Հանգիստ զբոսանք կապով</a></li>
-            <li><a href="#topics">Վստահ կանչ և վերադարձ</a></li>
-            <li><a href="#topics">Հանգիստ վարքագիծ տանը</a></li>
+            <li><a href="posts/shuny-qashum-e-kapy/">Շունը քաշում է կապը զբոսանքի ժամանակ</a></li>
+            <li><a href="posts/shan-dzagy-kcum-e-dzerqery/">Շան ձագը կծում է ձեռքերը</a></li>
+            <li><a href="posts/sovorecnel-shany-ari-hramany/">Ինչպես սովորեցնել «արի» հրամանը</a></li>
+            <li><a href="posts/inchu-e-shuny-hachum/">Ինչու է շունը հաչում</a></li>
           </ul>
         </div>
         <aside class="ad-slot ad-slot-box" aria-label="Գովազդ" data-ad-slot="sidebar-rectangle">
