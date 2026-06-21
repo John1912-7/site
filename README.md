@@ -1,11 +1,12 @@
 # Dog Training Academy
 
-Public SEO-ready blog starter for a future dog training content site.
+Public SEO-ready Armenian blog starter for dog training content in Armenia.
 
-## What is included
+## Included
 
 - Static GitHub Pages website
-- SEO metadata, Open Graph tags, JSON-LD structured data
+- Armenian `hy-AM` SEO metadata, Open Graph tags, and JSON-LD structured data
+- Armenia-focused regional metadata
 - Reserved ad placements for future monetization
 - Empty article grid ready for future posts
 - `robots.txt`, `sitemap.xml`, RSS feed, and `.nojekyll`
@@ -13,13 +14,11 @@ Public SEO-ready blog starter for a future dog training content site.
 
 ## Publishing notes
 
-The repository is public. GitHub Pages is configured through `.github/workflows/pages.yml` and publishes the repository root as the site artifact.
-
-Expected Pages URL:
+Public site URL:
 
 https://john1912-7.github.io/site/
 
-After adding posts, update:
+After adding Armenian posts, update:
 
 - `sitemap.xml`
 - `feed.xml`
