@@ -345,6 +345,27 @@ h2 {
   gap: 16px;
 }
 
+.post-card {
+  min-height: 210px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(22, 33, 29, .06);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.post-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.post-card h3 a:hover { color: var(--green); }
+.post-card p:last-child { margin: 0; color: var(--muted); }
+
 .empty-state {
   padding: 34px;
   border: 1px solid var(--line);
@@ -409,6 +430,139 @@ h2 {
   font-weight: 900;
 }
 
+.post-page {
+  background: linear-gradient(180deg, #fbfcf8 0%, #fff 280px, #fbfcf8 100%);
+}
+
+.post-article {
+  width: min(840px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 56px 0 24px;
+}
+
+.post-hero {
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--line);
+}
+
+.breadcrumb {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: .95rem;
+  font-weight: 800;
+}
+
+.breadcrumb a { color: var(--green-deep); }
+
+.post-hero h1 {
+  margin: 0;
+  font-size: clamp(2.3rem, 6vw, 4.6rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.post-lead {
+  margin: 24px 0 0;
+  color: #34443d;
+  font-size: clamp(1.08rem, 2vw, 1.28rem);
+}
+
+.quick-box {
+  margin-top: 28px;
+  padding: 22px;
+  border: 1px solid rgba(31, 111, 91, .22);
+  border-radius: 8px;
+  background: var(--mint);
+}
+
+.quick-box h2 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.quick-box p { margin: 0 0 16px; }
+
+.post-content {
+  padding: 24px 0 0;
+}
+
+.post-content section {
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(219, 229, 223, .7);
+}
+
+.post-content section:last-child { border-bottom: 0; }
+
+.post-content h2 {
+  margin-bottom: 14px;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+}
+
+.post-content p,
+.guide-steps li,
+.day-plan p,
+.faq-list p {
+  color: #34443d;
+  font-size: 1.05rem;
+}
+
+.guide-steps {
+  margin: 0;
+  padding-left: 1.35rem;
+  display: grid;
+  gap: 14px;
+}
+
+.day-plan {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.day-plan p { margin: 0; }
+
+.faq-list {
+  display: grid;
+  gap: 10px;
+}
+
+.faq-list details {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 14px 16px;
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-weight: 900;
+  color: var(--green-deep);
+}
+
+.faq-list p { margin-bottom: 0; }
+
+.related-posts {
+  display: grid;
+  gap: 12px;
+}
+
+.related-posts a {
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--green-deep);
+  font-weight: 900;
+}
+
+.related-posts a:hover {
+  border-color: rgba(31, 111, 91, .45);
+  color: var(--clay);
+}
+
 .footer {
   margin-top: 40px;
   padding: 42px max(16px, calc((100% - 1180px) / 2));
@@ -468,4 +622,7 @@ h2 {
   .empty-state { padding: 24px; }
   .subscribe-form { grid-template-columns: 1fr; }
   .subscribe-form button { min-height: 44px; }
+  .post-article { padding-top: 38px; }
+  .post-hero h1 { font-size: 2.35rem; }
+  .quick-box { padding: 18px; }
 }
