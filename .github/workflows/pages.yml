@@ -57,6 +57,21 @@ jobs:
           }
           $sitemap = "<?xml version='1.0' encoding='UTF-8'?>`n<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>`n$($entries -join "`n")`n</urlset>`n"
           Set-Content -LiteralPath site-growth-update/sitemap.xml -Value $sitemap -Encoding UTF8
+      - name: Validate sitemap
+        shell: pwsh
+        run: |
+          $path = 'site-growth-update/sitemap.xml'
+          if (-not (Test-Path $path)) { throw 'sitemap.xml was not generated' }
+          [xml]$xml = Get-Content -LiteralPath $path -Raw
+          $ns = New-Object System.Xml.XmlNamespaceManager($xml.NameTable)
+          $ns.AddNamespace('sm', 'http://www.sitemaps.org/schemas/sitemap/0.9')
+          $locs = $xml.SelectNodes('//sm:url/sm:loc', $ns) | ForEach-Object { $_.InnerText }
+          if ($locs.Count -ne 18) { throw "Expected 18 sitemap URLs, got $($locs.Count)" }
+          foreach ($loc in $locs) {
+            if ($loc -notmatch '^https://john1912-7\.github\.io/site/(posts/[a-z0-9-]+/|about/|contact/)?$') { throw "Unexpected sitemap URL: $loc" }
+          }
+          if (($locs | Select-Object -Unique).Count -ne $locs.Count) { throw 'Duplicate URLs in sitemap' }
+          Write-Host "Validated sitemap with $($locs.Count) URLs"
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
