@@ -26,6 +26,37 @@ jobs:
       - name: Build expanded static site
         shell: pwsh
         run: ./tools/build-growth-site.ps1
+      - name: Rewrite sitemap
+        shell: pwsh
+        run: |
+          $siteUrl = 'https://john1912-7.github.io/site'
+          $today = '2026-06-23'
+          $slugs = @(
+            '',
+            'about',
+            'contact',
+            'posts/shuny-qashum-e-kapy',
+            'posts/shan-dzagy-kcum-e-dzerqery',
+            'posts/shuny-chcatkel-mardkanc-vra',
+            'posts/sovorecnel-shany-ari-hramany',
+            'posts/inchu-e-shuny-hachum',
+            'posts/inchpes-sovorecnel-shany-nstel',
+            'posts/shuny-chi-lsum-inch-anel',
+            'posts/shuny-vakhenum-e-dursum',
+            'posts/shuny-menak-mnalis-hachum-e',
+            'posts/shan-dzagi-khnamq-arajin-orer',
+            'posts/shan-patvastumner-hayastanum',
+            'posts/shuny-che-utum-inch-anel',
+            'posts/shuny-krcum-e-kahuyqy',
+            'posts/shuny-vazum-e-mardkanc-koghm',
+            'posts/inchpes-sovorecnel-shany-teghy-hramany'
+          )
+          $entries = $slugs | ForEach-Object {
+            $url = if ($_ -eq '') { "$siteUrl/" } else { "$siteUrl/$_/" }
+            "  <url><loc>$url</loc><lastmod>$today</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>"
+          }
+          $sitemap = "<?xml version='1.0' encoding='UTF-8'?>`n<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>`n$($entries -join "`n")`n</urlset>`n"
+          Set-Content -LiteralPath site-growth-update/sitemap.xml -Value $sitemap -Encoding UTF8
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
